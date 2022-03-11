@@ -115,7 +115,7 @@ class PhoneController extends Controller
     public function update(Request $request, Phone $phone)
     {
 
-        $image = null;
+        $image =  null;
             if($phone->image){
 
                 if($request->file('image')){
