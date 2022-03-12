@@ -16,14 +16,9 @@ class BookController extends Controller
      */
     public function index(Request $request)
     {
-        // dd($request->search);
+
 
         $book =  Book::query()->with('author');
-        // $book = Book::get();
-        // $book = Book::where('id', '=', $request->id)->first();
-
-        // $book = $book->get();
-        // dd($book);
 
         if($request->search){
             $book = $book->where('name', 'like', '%'.$request->search.'%');
