@@ -25,7 +25,7 @@ class PhoneController extends Controller
             $phone = $phone->where('name', 'like', '%'.$request->search.'%');
         }
 
-        $phone = $phone->get();
+            $phone = $phone->get();
 
            return view('phones.index', ['phone' => $phone]);
     }
