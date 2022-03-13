@@ -24,7 +24,7 @@
                 <td>{{$item->price}}</td>
                 <td>{{$item->created_at}}</td>
                 <td>{{$item->updated_at}}</td>
-                <td><a class="btn btn-warning" href="{{route('book.edit', ['book' => $item->id])}}">Update</a></td>
+                <td><a class="btn btn-primary" href="{{route('book.edit', ['book' => $item->id])}}"><span style="font-size: 20px">&#9998</span></a></td>
                 </tr>
         </tbody>
     </table>

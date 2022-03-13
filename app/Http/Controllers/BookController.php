@@ -16,8 +16,6 @@ class BookController extends Controller
      */
     public function index(Request $request)
     {
-
-
         $book =  Book::query()->with('author');
 
         if($request->search){

@@ -6,7 +6,7 @@
        </div>
     <form action="{{route('book.index')}}" method="GET">
         <input class="form-control" type="search" name="search" placeholder="🔎 Search">
-        <input  class="btn btn-success" type="submit" value="🔎">
+        <input style="width: 15%" class="btn btn-success" type="submit" value="🔎Search">
     </form><br>
     <table class="table table-light">
         <thead>
@@ -24,8 +24,8 @@
 
                 <tr>
                     <td>{{$item->id}}</td>
-                    <td><a href="{{route('book.show', ['book' => $item->id])}}">{{$item->name}}</a></td>
-                    <td><img src="{{asset('/storage/books/'.$item->image)}}" width="100" alt="Bu yerda rasm bor"></td>
+                    <td><a style="color: black" href="{{route('book.show', ['book' => $item->id])}}">{{$item->name}}</a></td>
+                    <td><a style="color: black" href="{{route('book.show', ['book' => $item->id])}}"><img src="{{asset('/storage/books/'.$item->image)}}" width="100" height="120" alt="Bu yerda rasm bor"></a></td>
                     <td>{{$item->created_at}}</td>
                     <td>
                         <form action="{{route('book.destroy', ['book' => $item->id])}}" method="POST">
