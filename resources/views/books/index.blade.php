@@ -1,8 +1,10 @@
 @extends('layout.layout')
 @section('content')
         <h1>Books all information</h1>
-       <div style="margin-right: 0%">
-          <a style="width: 10%" class="btn btn-primary" href="{{route('book.create')}}"><span style='width: 10px'>&#10010;</span></a>
+       <div style="margin-left: 1015px">
+            <a style="width: 100px" class="btn btn-primary" href="{{route('book.create')}}">
+                <span style='width: 5px'>&#10010;</span>
+            </a>
        </div>
     <form action="{{route('book.index')}}" method="GET">
         <input class="form-control" type="search" name="search" placeholder="🔎 Search">
